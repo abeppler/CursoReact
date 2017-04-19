@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Title from './title'
 
 ReactDOM.render(
-    <div>
-        <h1>Teste com webpack</h1>
-    </div>,
+    <Title/>,
     document.getElementById('app')
 )
