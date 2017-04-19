@@ -1,12 +1,32 @@
-import React from 'react'
-import Button from './button'
-import LikeButton from './like-button'
+import React, {Component} from 'react'
 
-const App = () => (
-    <div>
-        <Button nome="bosta" />
-        <LikeButton/>
-    </div>
-)
+class App extends Component {
+    constructor(){
+        super()
+
+        this.state = {
+            valor: 'valor inicial'
+        }
+    }
+
+    render(){
+        return (
+            <div>
+                <span>
+                    {this.state.valor}
+
+                    <button onClick={() => {
+                        this.setState({
+                            valor: 'novo valor'
+                        })
+                        }                        
+                    }>
+                    Mudar valor
+                    </button>
+                </span>
+            </div>
+        )
+    }
+}
 
 export default App
