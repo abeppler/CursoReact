@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Title = ({children}) => {
+const Title = ({valor}) => {
     return (
         <h1>
-            {children}
+            {valor}
         </h1>
     )
 }

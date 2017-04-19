@@ -1,7 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import Title from './title'
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super()
 
         this.state = {
@@ -9,21 +10,18 @@ class App extends Component {
         }
     }
 
-    render(){
+    render() {
         return (
             <div>
-                <span>
-                    {this.state.valor}
-
-                    <button onClick={() => {
-                        this.setState({
-                            valor: 'novo valor'
-                        })
-                        }                        
-                    }>
+                <Title valor={this.state.valor}></Title>
+                <button onClick={() => {
+                    this.setState({
+                        valor: 'novo valor'
+                    })
+                }
+                }>
                     Mudar valor
                     </button>
-                </span>
             </div>
         )
     }
