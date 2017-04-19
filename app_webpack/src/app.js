@@ -3,10 +3,11 @@ import Title from './title'
 
 const App = () => (
     <div>
-        <Title valor="Bosta"/>
-        <button onClick={() => console.log('clicou')}>
-            Clique em mim!
-        </button>
+        <Title>
+            <span>
+                Olá
+            </span>
+        </Title>
     </div>
 )
 
