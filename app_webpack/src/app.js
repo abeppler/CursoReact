@@ -1,13 +1,11 @@
 import React from 'react'
-import Title from './title'
+import Button from './button'
+import LikeButton from './like-button'
 
 const App = () => (
     <div>
-        <Title>
-            <span>
-                Olá
-            </span>
-        </Title>
+        <Button nome="bosta" />
+        <LikeButton/>
     </div>
 )
 
