@@ -8,11 +8,9 @@ class App extends Component {
         this.state = {
             valor: 'valor inicial'
         }
-
-        this.acaoDoBotao = this.acaoDoBotao.bind(this)
     }
 
-    acaoDoBotao(){
+    acaoDoBotao = () => {
         this.setState({
             valor: 'valoooor'
         })
