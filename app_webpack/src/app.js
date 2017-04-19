@@ -8,18 +8,21 @@ class App extends Component {
         this.state = {
             valor: 'valor inicial'
         }
+
+        this.acaoDoBotao = this.acaoDoBotao.bind(this)
+    }
+
+    acaoDoBotao(){
+        this.setState({
+            valor: 'valoooor'
+        })
     }
 
     render() {
         return (
             <div>
                 <Title valor={this.state.valor}></Title>
-                <button onClick={() => {
-                    this.setState({
-                        valor: 'novo valor'
-                    })
-                }
-                }>
+                <button onClick={this.acaoDoBotao}>
                     Mudar valor
                     </button>
             </div>
