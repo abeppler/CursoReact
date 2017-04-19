@@ -1,8 +1,9 @@
 import React from 'react'
+import Title from './title'
 
 const App = () => (
     <div>
-        Meu App!!!
+        <Title valor="Bosta"/>
     </div>
 )
 
