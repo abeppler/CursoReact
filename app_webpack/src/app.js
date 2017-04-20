@@ -12,7 +12,7 @@ class App extends Component {
 
     acaoDoBotao = () => {
         this.setState({
-            valor: 'valoooor'
+            valor: null
         })
     }
 

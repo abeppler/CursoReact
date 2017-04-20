@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 
 const Title = ({valor}) => {
     return (
@@ -6,6 +6,10 @@ const Title = ({valor}) => {
             {valor}
         </h1>
     )
+}
+
+Title.propTypes = {
+    valor: PropTypes.number.isRequired
 }
 
 export default Title
