@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Title from './title'
 
+import * as JiraApi from './Jira/JiraApi'
+
 class App extends Component {
     constructor() {
         super()
@@ -10,10 +12,13 @@ class App extends Component {
         }
     }
 
-    acaoDoBotao = () => {
+    acaoDoBotao = () => {       
+      
+        
+
         this.setState({
-            valor: null
-        })
+            valor: JiraApi.getBoards()
+        }, () => console.log(this.state))
     }
 
     render() {
