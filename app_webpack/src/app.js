@@ -13,9 +13,6 @@ class App extends Component {
     }
 
     acaoDoBotao = () => {       
-      
-        
-
         this.setState({
             valor: JiraApi.getBoards()
         }, () => console.log(this.state))

@@ -4,26 +4,22 @@ import * as utils from './../Util/utils'
 
 const JiraConnection = (jiraUsername, jiraPassword) => {
 
-    const instance = Axios.create({
-        baseURL : 'http://jira.hbsis.com.br',
-        timeout: 100000,  
+  debugger
 
-    })
+  const base64Auth = new Buffer(`${jiraUsername}:${jiraPassword}`)
 
-    var config = {
-      headers: {
-        // authorization: {
-        //   basic: 'Basic YW5kZXJzb24uYmVwcGxlcjptMW5oNHMzbmg0',
-        // }
-
-        'authorization':'Basic YW5kZXJzb24uYmVwcGxlcjptMW5oNHMzbmg0'
-      }
-    };
-
-    return {
-      get: (url) => instance.get(url),
-      post: (url, data) => instance.post(url, data)
+  const instance = Axios.create({
+    baseURL : 'http://jira.hbsis.com.br',
+    timeout: 100000,  
+    headers: {
+      'Authorization':'Basic YW5kZXJzb24uYmVwcGxlcjptMW5oNHMzbmg0',
     }
+  })
+
+  return {
+    get: (url) => instance.get(url),
+    post: (url, data) => instance.post(url, data)
+  }
 
 }
 
